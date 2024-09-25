@@ -7,7 +7,7 @@ from datetime import datetime
 class PostBase(BaseModel):
     title:str
     content:str
-    published: bool
+    #published: bool
 
 class PostCreate(PostBase):
     pass
@@ -23,9 +23,9 @@ class User(BaseModel):
 
 class Post(PostBase):
     id: int
-    owner_id: int
+    #owner_id: int
     created_at: datetime
-    owner: User
+    #owner: User
     
     class Config:
         orm_mode =True
